@@ -2,9 +2,9 @@
 include "../view/template/header.php";
  ?>
 
- <div class="row mt-5">
-    <section class="col-lg-9">
-      <h2>Nos derniers produits</h2>
+ <div class="row mt-5 mx-auto">
+    <section class="col-lg-6 mx-auto">
+      <h2>Liste des volontaires</h2>
       <div class="container-fluide">
         <div class="row">
           <?php
@@ -16,10 +16,10 @@ include "../view/template/header.php";
               <div class="card-body">
                 <h5 class="card-title"><?php echo $volunteer["userName"] ?></h5>
                 <p class="card-text"><?php echo $volunteer["name"] ?></p>
-                <p class="card-text"><?php echo $volunteer["age"] ?></p>
+                <p class="card-text"><?php echo $volunteer["age"] . "ans" ?></p>
               </div>
               <div class="card-body">
-                <a href="<?php echo 'single.php?id=' . $volunteer['id']; ?>" class="btn lightBg">Voir</a>
+                <a href="<?php echo '.php?id=' . $volunteer['id']; ?>" class="btn lightBg">Voir</a>
               </div>
             </div>
           </article>

@@ -1,5 +1,5 @@
 </main>
- <footer class="jumbotron jumbotron-fluid">
+ <footer class="jumbotron jumbotron-fluid mb-0">
    <div class="container">
      <h1 class="display-4">Save The Planet</h1>
      <p class="lead">M.V.C. training for the Adep formation</p>
