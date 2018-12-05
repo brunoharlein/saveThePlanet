@@ -5,15 +5,25 @@
     return $postVolunteers;
   }
 
-  function addVolunteer ($db) {
-
-
-  }
-  function getProduct($id, $db) {
-    $query = $db->prepare("SELECT * FROM product WHERE id=?");
+  function singleVolunteer ($id, $db) {
+    $query = $db->prepare("SELECT * FROM volunteer WHERE id=?");
     $query->execute([$id]);
-    $product = $query->fetch(PDO::FETCH_ASSOC);
-    return $product;
+    $volunteer = $query->fetch(PDO::FETCH_ASSOC);
+    return $volunteer;
+  }
+
+  function addVolunteer($db, $volunteer) {
+    $query = $db->prepare("INSERT INTO volunteer (userName, name, age, appreciation, availability, street, city) VALUES(:userName, :name, :age, :appreciation, :availability, :street, :city)");
+    $result = $query->execute([
+      "userName" => $volunteer["userName"],
+      "name" => $volunteer["name"],
+      "age" => $volunteer["age"],
+      "appreciation" => $volunteer["appreciation"],
+      "availability" => $volunteer["availability"],
+      "street" => $volunteer["street"],
+      "city" => $volunteer["city"]
+    ]);
+    return $result;
   }
 
 

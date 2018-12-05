@@ -16,10 +16,10 @@ include "../view/template/header.php";
               <div class="card-body">
                 <h5 class="card-title"><?php echo $volunteer["userName"] ?></h5>
                 <p class="card-text"><?php echo $volunteer["name"] ?></p>
-                <p class="card-text"><?php echo $volunteer["age"] . "ans" ?></p>
+                <p class="card-text"><?php echo $volunteer["age"] ?> ans</p>
               </div>
               <div class="card-body">
-                <a href="<?php echo '.php?id=' . $volunteer['id']; ?>" class="btn lightBg">Voir</a>
+                <a href="<?php echo 'singleVolunteer.php?id=' . $volunteer['id']; ?>" class="btn lightBg">Voir</a>
               </div>
             </div>
           </article>
