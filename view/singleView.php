@@ -10,6 +10,7 @@ include "../view/template/header.php";
      <h3><?php echo $volunteer["city"]; ?></h3>
      <div class="container-fluide">
        <?php echo $volunteer["appreciation"]; ?>
+
      </div>
      <div>
        <span class="badge badge-secondary">Age : <?php echo $volunteer["age"] ?>ans</span>
@@ -21,6 +22,7 @@ include "../view/template/header.php";
          echo "<span class='badge badge-danger'>Indisponible</span>";
        }
         ?>
+        <h2><a class="badge badge-danger" href="<?php echo 'destroyVolunteer.php?id=' . $volunteer['id']; ?>">DESTROY</a></h2>
      </div>
    </section>
  </div>
