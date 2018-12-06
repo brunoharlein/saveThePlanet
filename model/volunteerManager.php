@@ -53,10 +53,22 @@
 
 
   // update volunteerManager
-  function updateVolunteer($id, $db) {
-    $query = $db->prepare("UPDATE volunteer SET userName = :userName, name = :name, age = :age, appreciation = :appreciation, availability = :availability, street = :street, city = :city");
-
+  function updateVolunteer($db, $volunteer) {
+    $query = $db->prepare("UPDATE volunteer SET userName = :userName, name = :name, age = :age, appreciation = :appreciation, availability = :availability, street = :street, city = :city WHERE id = :id");
+    $update = $query->execute([
+      "id" => $volunteer["id"],
+      "userName" => $volunteer["userName"],
+      "name" => $volunteer["name"],
+      "age" => $volunteer["age"],
+      "appreciation" => $volunteer["appreciation"],
+      "availability" => $volunteer["availability"],
+      "street" => $volunteer["street"],
+      "city" => $volunteer["city"]
+    ]);
+    return $update;
   }
+
+
 
 
 

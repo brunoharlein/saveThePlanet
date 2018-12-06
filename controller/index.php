@@ -4,8 +4,8 @@ require "../model/volunteerManager.php";
 
 if (isset($_POST['choix'])) {
   switch ($_POST['choix']) {
-    case 1:
-      $postVolunteers = orderByAz($db);
+      case 1:
+        $postVolunteers = orderByAz($db);
       break;
       case 2:
         $postVolunteers = age($db);

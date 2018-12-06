@@ -22,8 +22,8 @@ include "../view/template/header.php";
          echo "<span class='badge badge-danger'>Indisponible</span>";
        }
         ?>
-        <h2><a class="badge badge-danger" href="<?php echo 'destroyVolunteer.php?id=' . $volunteer['id']; ?>">DESTROY</a></h2>
-     </div>
+         <h2><a class="badge badge-danger" href="<?php echo 'destroyVolunteer.php?id=' . $volunteer['id']; ?>">DESTROY</a></h2>
+         <h3><a class="badge badge-info" href="<?php echo 'updateVolunteer.php?id=' . $volunteer['id']; ?>">UPDATE</a></h3>
    </section>
  </div>
 
