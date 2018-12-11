@@ -29,6 +29,9 @@
        <li class="nav-item active">
         <a class="nav-link" href="addVolunteer.php">Add Volunteer <span class="sr-only">(current)</span></a>
        </li>
+       <li>
+         <a class="nav-link btn btn-danger" href="destroySession.php" >session destroy</a>
+       </li>
       </ul>
      </div>
     </nav>
