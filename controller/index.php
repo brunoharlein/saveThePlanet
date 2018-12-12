@@ -1,7 +1,10 @@
 <?php
 require "../model/db.php";
 require "../model/volunteerManager.php";
-
+require "../model/userManager.php";
+require "../service/sessionManager.php";
+startSessionUser($user);
+var_dump($user);
 if (isset($_POST['choix'])) {
   switch ($_POST['choix']) {
       case 1:
@@ -16,9 +19,7 @@ if (isset($_POST['choix'])) {
 }
 }else{
 $postVolunteers = postVolunteers ($db);
-
 }
-
-// $postVolunteers = postVolunteers ($db);
 require "../view/indexView.php";
+
  ?>

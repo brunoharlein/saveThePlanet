@@ -11,21 +11,22 @@ if(!empty($_POST)) {
   // $_POST = clearForm($_POST);
   //On récupère l'utilisateur stocké sur le site
   $user = getUser($_POST, $db);
-  var_dump($user);
+  // var_dump($user);
   //On vérifie si la db a trouvé un utilisateur
   if($user["pseudo"] === $_POST["pseudo"] && $user["password"] === $_POST["password"]) {
 
   // if(!empty($user) && $_POST["password"], $user["password"]) {
     startSessionUser($user);
+    var_dump($_SESSION["user"]);
     header("Location: index.php");
     exit;
   }
   else {
-    header("Location: login.php");
+    header("Location: startLogin.php");
     exit;
   }
 }
-
+// insertion formulaire
 require "../view/startLoginView.php";
 
  ?>
